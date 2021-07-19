@@ -1,7 +1,7 @@
-<html>
+<html xmlns:th="http://www.w3.org/1999/html">
 <body>
   <form>
-    <th:block th:fragment="select (label,name,items)">
+    <th:blockquote th:fragment="select (label,name,items)">
       <div th:with="valid=${!#fields.hasErrors(name)}"
         th:class="${'form-group' + (valid ? '' : ' has-error')}"
         class="form-group">
@@ -23,7 +23,7 @@
           </th:block>
         </div>
       </div>
-    </th:block>
+    </th:blockquote>
   </form>
 </body>
 </html>
